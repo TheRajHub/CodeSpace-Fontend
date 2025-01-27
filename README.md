@@ -89,8 +89,7 @@ The Code of the backend is here: <a href="https://github.com/TheRajHub/CodeSpace
 
 ## Future Enhancements
 
-- Add user authentication for secure access.
-- Implement a chat feature within rooms.
+- Solving the terminal-specific double execution problem.
 - Enhance the file editor with syntax highlighting and language support.
 - Add room-specific access controls.
 
