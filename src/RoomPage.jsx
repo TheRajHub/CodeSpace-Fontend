@@ -47,12 +47,14 @@ const RoomPage = () => {
  
 
   const joinRoom=(e)=>{
+    if(!socket) return
     e.preventDefault(); // Prevent default form submission
     socket.emit('joinRoom',{room:roomId,username:email})
     navigate("/2");
   }
 
   const createRoom=(e)=>{
+    if(!socket) return
     e.preventDefault(); // Prevent default form submission
     let r=uuidv4()
     console.log(r)

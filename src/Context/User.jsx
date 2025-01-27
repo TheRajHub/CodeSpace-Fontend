@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import UserContext from './UserContext'
 function User({children}){
-    const [users,setUsers]=useState()
+    const [users,setUsers]=useState([])
     function getuser(socket){
         if(!socket) return
         socket.on('user',(data)=>{

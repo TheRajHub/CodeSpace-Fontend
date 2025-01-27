@@ -16,7 +16,6 @@ function LeftSidebar({ isCollapsed, toggleSidebar, leaveRoom }) {
     const {getuser,users}=useContext(UserContext)
     const [room,setRoom]=useState('')
 
-    console.log(users)
   
     return (
       <div className={`${styles.leftSidebar} ${isCollapsed ? styles.collapsed : ''}`}>
@@ -37,11 +36,15 @@ function LeftSidebar({ isCollapsed, toggleSidebar, leaveRoom }) {
                 {room}
               </h4>
               <h4 className={styles.userListHeader}>Users are:</h4>
-              <ul className={styles.userListItems}>
-                {users.map((user, index) => (
-                  <li key={index} className={styles.userItem}>{user}</li>
-                ))}
-              </ul>
+              {Array.isArray(users) && users.length > 0 ? (
+                <ul className={styles.userListItems}>
+                  {users.map((user, index) => (
+                    <li key={index} className={styles.userItem}>{user}</li>
+                  ))}
+                </ul>
+                ) : (
+                  <p>No users yet</p>
+              )}
               <button className={styles.leaveRoomBtn} onClick={leaveRoom}>Cut</button>
             
           </>
