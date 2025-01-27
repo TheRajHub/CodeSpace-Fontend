@@ -1,7 +1,7 @@
 # Room Collaboration Platform
 
 This Frontend of a is a real-time collaboration platform that allows users to create or join rooms for live coding, chat, and interaction. The application leverages React, Socket.io, and CSS modules to provide an intuitive and interactive experience for users.
-The Code of the backend is here: <a href="https://github.com/TheRajHub/CodeSpace-Fontend.git">Backend</a>
+The Code of the backend is here: <a href="https://github.com/TheRajHub/CodeSpace.git">Backend</a>
 
 ## Features
 
